@@ -1,0 +1,13 @@
+.card:hover{
+    background-color: #072543;
+    color:#fff;
+}
+.active{
+    background-color: #072543;
+    color:#fff;
+}
+.card{
+    transition: all .7s;
+    cursor: pointer;
+    text-align: center;
+}

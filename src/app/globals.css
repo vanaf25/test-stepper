@@ -15,19 +15,44 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
+.my-container{
+  max-width: 930px;
+  margin: 0 auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #FAFAFA;
+  font-family: "Scandia",Arial,sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+.animation{
+  animation: moveOutLeft 0.4s linear forwards;
+  pointer-events: none;
+}
+.animationRight{
+  animation: moveOutRight 0.4s linear forwards;
+  pointer-events: none;
+}
+@keyframes moveOutLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes moveOutRight {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }
