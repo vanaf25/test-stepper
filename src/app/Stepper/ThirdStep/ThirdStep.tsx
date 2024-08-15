@@ -87,7 +87,7 @@ const ThirdStep:React.FC<Props> = ({defaultData}) => {
                     </div>
                     {errors["anrede"] && <p className={"text-red-800"}>Bitte Anrede angeben!</p> }
                     {/*@ts-ignore*/}
-                    {inputData.map(el=><InputField name={el.name} placeholder={el.placeholder} register={register} isError={!!errors[el.name]}/>)}
+                    {inputData.map(el=><InputField name={el.name} placeholder={el.placeholder} key={el.id} register={register} isError={!!errors[el.name]}/>)}
                     <div className={"grid grid-cols-3 "}>
                         <div className={"mr-1 grid col-span-2"}>
                             <InputField   name={"Straße"} placeholder={"Straße"} register={register} isError={!!errors["Straße"]}/>
